@@ -71,7 +71,7 @@
     score(percentscore);
 
     // console.log(checkedCount,percentscore);
-    weebLabel.textContent=checkedCount;
+    weebLabel.textContent=Math.round(percentscore);
     window.scrollTo({top:0, behavior:"instant"});
     // alert("Number of checked checkboxes: " + checkedCount);
 
