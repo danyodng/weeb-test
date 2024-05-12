@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>am i a weeb?</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>am i a weeb?</h1>
+        <p>if you've seen the anime, check the box and then submit!</p>
+        <p>with the power of AI and friendship, your weeb score is calculated!</p>
+        
+        <div class="score">
+            <div class="scorelabel">
+                <label id="weebLabel">0</label>
+            </div>
+            <div class="scorecomment">
+                <label id="weebComment">let's find out...</label>
+            </div>
+            <button onclick="resetBoxes()" class="restart">Reset</button>
+        </div>
+
+
+        <div class="animecheckboxes" id="animes"></div>
+        <button onclick="calculateChecked(event)" class="checkboxes">am i a weeb?</button>
+        <button onclick="resetBoxes()" class="restart">Reset</button>
+
+        <!-- <div class="toggle">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+        </div> -->
+    </div>
+    
+
+    
+    
+      
+</body>
+</html>
