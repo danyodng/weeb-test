@@ -80,20 +80,24 @@
 }
 
 function score(percent){
-    let scorecomment; 
-    if (percent <= .10){
-        scorecomment = "do you know what anime is, you silly baka?";
-    }
-    else if (percent <= .49){
-        scorecomment ="you're almost a weeb, gambare gambare";
-    }
-    else if (percent <= .85){
-        scorecomment ="wao sugoi you're definitely a weeb";
-    }
-
-    else if (percent >= .95){
-        scorecomment ="yare yare, you need some help";
-    }
+    let scorecomment;
+    switch(true){
+        case percent <= .1:
+            scorecomment = "do you know what anime is, you silly baka?";
+            break;        
+        
+        case percent <= .49:
+            scorecomment ="you're almost a weeb, gambare gambare";
+            break;        
+        
+        case percent <= .1:
+            scorecomment ="wao sugoi you're definitely a weeb";
+            break;        
+            
+        case percent <= .49:
+            scorecomment ="yare yare, you need some help";
+            break;        
+        }
     weebComment.textContent=scorecomment;
 }
 
