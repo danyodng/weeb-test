@@ -1,3 +1,30 @@
+.descriptionHeader {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weebPage{
+  display:flex;
+  justify-content: flex-end;
+}
+
+.weebBtn {
+  background-color: rgb(135, 195, 135);
+  border:none;
+  box-shadow: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.weebBtn:hover {
+  background-color: rgb(115, 167, 115);
+
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -5,8 +32,11 @@
     align-items: center;
 }
 
+h1{
+  font-size: 40px;
+}
 h1, p {
-    margin: 0;
+    margin: auto;
 }
 
 p {
@@ -23,14 +53,13 @@ p {
 }
 
 #weebLabel{
-    font-size: 100px;
+    font-size: 120px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .scorecomment {
     display:flex;
     flex-direction: column;
-    border: 1px solid pink;
 }
 
 #weebComment{
@@ -38,28 +67,51 @@ p {
     padding:0;
     font-size: 20px;
     text-align: center;
-}
+ }
 
 .animecheckboxes{
     margin-top: 20px;
     margin-bottom:10px;
     padding:0;
-    border: 1px solid red;
-
 }
+
+
 button.checkboxes {
     font-size: 24px;
     margin: 5px;
     padding: 10px 20px;
-
+    border: none;
+    background-color: rgb(72, 151, 230);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    cursor:pointer;
 }
 
-button.restart {
+button.checkboxes:hover{
+  background-color: rgb(57, 122, 186);
+}
+
+.restart {
     margin: 5px;
     font-size:12px;
-    
+    background-color: rgb(230, 150, 134);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    box-shadow: none;
+    border:none;
 }
 
+.restart:hover{
+  background-color: rgb(219, 144, 129);
+}
+
+/* TOGGLE SWITCH  */
+.toggle {
+  display:flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 .switch {
     position: relative;
     display: inline-block;
@@ -120,4 +172,25 @@ button.restart {
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .toggle-name{
+    margin-left: 2px;
+    font-size: 20px;
+  }
+
+
+  .forms {
+    margin-left: 10px;
+  }
+
+  #optionalForm {
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+
+  }
+
+  #optionalForm input {
+    width: 70px;
   }

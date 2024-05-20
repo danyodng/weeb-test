@@ -10,41 +10,50 @@
  "erased", "evangelion", "fairy tail", "fate/zero", "frieren", "fruits basket", "fullmetal alchemist", "gintama", "given", 
  "haikyuu", "horimiya", "hunter x hunter", "jojo's bizarre adventure", "jujutsu kaisen", "kaiju no. 8", "kamisama kiss", 
  "kuroko's basketball", "love is war", "mob psycho", "monster", "moriarty the patriot", "my hero academa", "nana", "naruto", 
- "noragami", "one piece", "one punch man", "oshi no ko", "pokemon", "psyco pass", "ranking of kings", "samurai champloo", "spy x family", "steins;gate", "sword art online", "the apothecary diaries", "the first slam dunk", "tokyo ghoul", "tokyo revengers", "vinland saga", "violet evergarden", "vivy: fluorite eye's song", "your lie in april", "your name", "yu-gi-oh", "yuri on ice", "yuu yuu hakusho"];
+ "noragami", "one piece", "one punch man", "oshi no ko", "pokemon", "psycho pass", "ranking of kings", "samurai champloo", "spy x family", "steins;gate", "sword art online", "the apothecary diaries", "the first slam dunk", "tokyo ghoul", "tokyo revengers", "vinland saga", "violet evergarden", "vivy: fluorite eye's song", "your lie in april", "your name", "yu-gi-oh", "yuri on ice", "yuu yuu hakusho"];
 
- // Function to create form with checkboxes and labels
- function createFormWithCheckboxes(animeArray, formFor, formMethod, formClass) {
-     // Create form element
-     let form = document.createElement('form');
-     form.setAttribute('for', formFor);
-     form.setAttribute('method', formMethod);
-     form.setAttribute('class', formClass);
+ document.addEventListener("DOMContentLoaded", function() {
+    const formContainer = document.getElementById('form-container');
 
-     // Iterate over each anime title in the array
-     animeArray.forEach(function(animeTitle) {
-         // Create checkbox
-         let checkbox = document.createElement('input');
-         checkbox.type = 'checkbox';
+    animes.forEach(anime => {
+        // Create a container div for each toggle switch
+        const toggleContainer = document.createElement('div');
+        toggleContainer.className = 'toggle';
 
-         // Create label
-         let label = document.createElement('label');
-         label.htmlFor = 'anime';
-         label.appendChild(document.createTextNode(animeTitle));
+        // Create the switch label
+        const switchLabel = document.createElement('label');
+        switchLabel.className = 'switch';
 
-         // Append checkbox and label to form
-         form.appendChild(checkbox);
-         form.appendChild(label);
+        // Create the input element for the toggle switch
+        const toggleSwitch = document.createElement('input');
+        toggleSwitch.type = 'checkbox';
+        toggleSwitch.id = `toggle-${anime.replace(/\s+/g, '-').toLowerCase()}`;
 
-         // Append line break for better visual separation
-         form.appendChild(document.createElement('br'));
-     });
+        // Create the span for the slider
+        const slider = document.createElement('span');
+        slider.className = 'slider round';
 
-     // Append form to the div with id "animes"
-     document.getElementById('animes').appendChild(form);
- }
+        // Append the input and slider to the switch label
+        switchLabel.appendChild(toggleSwitch);
+        switchLabel.appendChild(slider);
 
- // Call the function with the array of anime titles and form attributes
- createFormWithCheckboxes(animes, 'example.com/path', 'post', 'show');
+        // Create the label for the toggle switch name
+        const nameLabel = document.createElement('label');
+        nameLabel.className = 'toggle-name';
+        nameLabel.setAttribute('for', toggleSwitch.id);
+        nameLabel.textContent = anime;
+
+        // Append the switch label and name label to the container
+        toggleContainer.appendChild(switchLabel);
+        toggleContainer.appendChild(nameLabel);
+
+        // Append the container to the form container
+        // const br = document.createElement("br");
+        formContainer.appendChild(toggleContainer);
+        // formContainer.appendChild(br);
+
+    });
+});
 
  const weebLabel = document.getElementById("weebLabel");
  const weebComment = document.getElementById("weebComment");
@@ -66,7 +75,7 @@
     
     
     let len =animes.length;
-    let percentscore  = checkedCount/len;
+    let percentscore = checkedCount/len;
     
     score(percentscore);
 
@@ -83,21 +92,25 @@ function score(percent){
     let scorecomment;
     switch(true){
         case percent <= .1:
-            scorecomment = "do you know what anime is, you silly baka?";
+            scorecomment = "you should watch more anime, you silly baka";
             break;        
         
         case percent <= .49:
             scorecomment ="you're almost a weeb, gambare gambare";
             break;        
         
-        case percent <= .1:
+        case percent <= .9:
             scorecomment ="wao sugoi you're definitely a weeb";
             break;        
             
-        case percent <= .49:
+        case percent <= .99:
             scorecomment ="yare yare, you need some help";
-            break;        
-        }
+            break;   
+            
+        case percent ==1:
+            scorecomment ="congratulations!! stand proud (or not), you're a weeb who's seen everything on this list";
+            break;   
+        }    
     weebComment.textContent=scorecomment;
 }
 

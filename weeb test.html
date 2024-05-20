@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anime purity test</title>
+    <link rel="stylesheet" href="weeb test.css">
+    <script src="weeb test.js" defer></script>
+</head>
+<body>
+    <header class="headers">
+        <div class="weebPage">
+            <a href="purity.html">
+                <button class="weebBtn">anime purity test</button>
+            </a>
+        </div>
+
+        <div class = "descriptionHeader">
+            <h1>am i a weeb</h1>
+            <p>if you've seen the anime, check the box and then submit</p>
+            <p>with the power of AI and friendship, your weeb score is calculated!</p>
+            <p>the anime list will continue to be updated, so come back to check your score</p> 
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="score">
+            <div class="scorelabel">
+                <label id="weebLabel">0</label>
+            </div>
+            <div class="scorecomment">
+                <label id="weebComment">let's find out...</label>
+            </div>
+            <button onclick="resetBoxes()" class="restart">restart</button>
+        </div>
+
+        <div class="animecheckboxes" id="form-container"></div>
+
+       <div class="optionalFormData">
+        <form action="" id="optionalForm">
+            <div class="forms">
+                <label for="Age">Age: </label>
+                <input type="number" placeholder="Optional" id="formAge" name="age"><br>
+            </div>
+            
+            <div class="forms">
+                <label for="gender">Gender: </label>
+                <input type="text" placeholder="Optional" id="formGender" name="gender"><br>
+            </div>
+            </form>
+        </div>
+
+      
+
+        <button onclick="calculateChecked(event)" class="checkboxes">am i a weeb?</button>
+        <button onclick="resetBoxes()" class="restart">restart</button>
+
+        <!-- <div class="toggle">
+            <label class="switch">
+                <input type="checkbox" id="toggle-switch">
+                <span class="slider round"></span>
+              </label>
+              <label class ="toggle-name" for="toggle-switch">toggle me</label>
+        </div> -->
+    </div>
+      
+</body>
+</html>
