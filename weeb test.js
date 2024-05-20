@@ -7,7 +7,7 @@
  const animes = ["assassination classroom", "attack on titan", "banana fish", "berserk", "black butler", 
  "black clover", "bleach", "blue lock", "bocchi the rock", "bungou stray dogs", "chainsaw man", "code geass", 
  "cowboy bepop", "cyberpunk: edgerunners", "death note", "demon slayer", "detective conan", "dr. stone", "dragon ball", 
- "erased", "evangelion", "fairy tail", "fate/zero", "frieren", "fruits basket", "fullmetal alchemist", "gintama", "given", 
+ "erased", "evangelion", "fairy tail", "fate/zero","food wars" ,"frieren", "fruits basket", "fullmetal alchemist", "gintama", "given", 
  "haikyuu", "horimiya", "hunter x hunter", "jojo's bizarre adventure", "jujutsu kaisen", "kaiju no. 8", "kamisama kiss", 
  "kuroko's basketball", "love is war", "mob psycho", "monster", "moriarty the patriot", "my hero academa", "nana", "naruto", 
  "noragami", "one piece", "one punch man", "oshi no ko", "pokemon", "psycho pass", "ranking of kings", "samurai champloo", "spy x family", "steins;gate", "sword art online", "the apothecary diaries", "the first slam dunk", "tokyo ghoul", "tokyo revengers", "vinland saga", "violet evergarden", "vivy: fluorite eye's song", "your lie in april", "your name", "yu-gi-oh", "yuri on ice", "yuu yuu hakusho"];
